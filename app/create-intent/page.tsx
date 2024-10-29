@@ -7,7 +7,7 @@ import Loading from "@/components/Loading";
 // import MonthlyCrossChainTransferSchedulerABI from "../abis/MonthlyCrossChainTransferScheduler.json";
 
 export default function CreateIntent() {
-    const { signer, account } = useWallet();
+    const { signer } = useWallet();
 
     const [tokenAddress, setTokenAddress] = useState<string>("");
     const [recipient, setRecipient] = useState<string>("");

@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link";
 import { useQuery } from "@apollo/client";
 import { GET_Intents } from "@/contracts/appoloQuery";
 import CancelIntentButton from "@/components/canel-intent-button";
@@ -19,7 +18,7 @@ export default function Home() {
           <thead>
             <tr>
               <th>Intent Index</th>
-              <th>Creater</th>
+              <th>Creator</th>
               <th>Recipient</th>
               <th>Send</th>
               <th>Cancel</th>
@@ -55,7 +54,7 @@ export default function Home() {
             <tr>
               <th>Status</th>
               <th>Intent Index</th>
-              <th>Creater</th>
+              <th>Creator</th>
             </tr>
           </thead>
 
