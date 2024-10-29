@@ -27,7 +27,15 @@ export default function Home() {
 
           <tbody>
 
-            {intents?.intentCreateds.map((intent: any) => {
+            {intents?.intentCreateds.map((intent: {
+              id: string;
+              intentIndex: string;
+              user: string;
+              recipient: string;
+              amount: string;
+              blockTimestamp: string;
+              frequency: string
+            }) => {
               for (let i = 0; i < intents?.intentCanceleds.length; i++) {
                 if (intent.id == intents?.intentCanceleds[i].id) {
                   return;
@@ -60,7 +68,11 @@ export default function Home() {
 
           <tbody>
 
-            {intents?.intentCanceleds.map((intent: any) => {
+            {intents?.intentCanceleds.map((intent: {
+              id: string;
+              intentIndex: string;
+              user: string;
+            }) => {
               return (
                 <tr key={intent.id}>
                   <td>Canceled</td>
