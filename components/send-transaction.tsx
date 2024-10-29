@@ -34,7 +34,7 @@ const SendTransactionButton = ({ intentCreator, amount, intentIndex, blockTimest
             await tx.wait();
             // Display success message
             alert('Transaction successful!');
-        } catch (error: any) {
+        } catch (error) {
             console.error('Transaction error:', error);
             alert('An error occurred while sending the transaction.');
         } finally {
